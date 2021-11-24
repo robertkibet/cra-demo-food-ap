@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Users in a Food store
 This is a React implementation for a users listing for a food store. It consumes apis from [rapidapi](https://rapidapi.com/shashwath-KR/api/fake-users7/) to demonstrate approaches with React context api and emotion-js styled components.
 
-![Screenshot](demo.PNG)
+![Screenshot](demo.png)
 
 
 > Made with love by React, Typescript, Emotion Js, Rapid API
