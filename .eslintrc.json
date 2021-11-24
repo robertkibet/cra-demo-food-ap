@@ -21,6 +21,7 @@
     }
   },
   "rules": {
+    "no-console": "error",
     "linebreak-style": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",

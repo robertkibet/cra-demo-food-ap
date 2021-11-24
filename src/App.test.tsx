@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+// disabled this rule since no testing has been setup
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';

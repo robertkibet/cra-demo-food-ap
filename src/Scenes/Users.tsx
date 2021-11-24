@@ -10,7 +10,6 @@ interface UsersComponentProps {
 }
 const Users = function ({ loading }:UsersComponentProps) {
   const usersList = React.useContext(UsersContext);
-  console.log('usersList', usersList);
   const formatAddress = (user: User) => `${user?.address?.city}, ${user?.address?.street}, ${user?.address?.suite}`;
   if (loading) {
     return <Text title="loading users..." />;

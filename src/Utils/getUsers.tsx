@@ -40,7 +40,6 @@ export const getUsers = async (): Promise<Array<User>> => new Promise((resolve, 
         }
       })
       .catch((error) => {
-        console.log(error);
         reject(error);
       });
   });
