@@ -11,6 +11,11 @@ export const ProfileCard = styled.div`
   gap: 5px;
   justify-items: center;
   align-items: center;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &: hover{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
 `;
 
 export const Avatar = styled.div`
