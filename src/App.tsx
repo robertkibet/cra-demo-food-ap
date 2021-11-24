@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './Layout';
+import Users from './Scenes/Users';
+import { UsersProvider } from './Service/UsersContext';
+import { getUsers, User } from './Utils/getUsers';
 
-function App() {
+const App = function () {
+  const [users, setUsers] = React.useState<User[]>([]);
+  React.useEffect(() => {
+    const getAllUsers = async () => {
+      const response = await getUsers();
+      setUsers(response);
+    };
+    getAllUsers();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UsersProvider value={users}>
+      <Layout>
+        <Users />
+      </Layout>
+    </UsersProvider>
   );
-}
+};
 
 export default App;
