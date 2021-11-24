@@ -5,10 +5,17 @@ import { UsersContext } from '../Service/UsersContext';
 import { User } from '../Utils/getUsers';
 import { ProfileUrl, UserBox } from './styles';
 
-const Users = function () {
+interface UsersComponentProps {
+  loading: boolean;
+}
+const Users = function ({ loading }:UsersComponentProps) {
   const usersList = React.useContext(UsersContext);
   console.log('usersList', usersList);
   const formatAddress = (user: User) => `${user?.address?.city}, ${user?.address?.street}, ${user?.address?.suite}`;
+  if (loading) {
+    return <Text title="loading users..." />;
+  }
+
   if (usersList?.length > 0) {
     return (
       <>
