@@ -19,6 +19,45 @@
         "react",
         "@typescript-eslint"
     ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
     "rules": {
+        "linebreak-style": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "indent": "off",
+        "max-len": [
+            "warn",
+            {
+                "code": 140
+            }
+        ],
+        "no-shadow": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "no-use-before-define": "off",
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ]
     }
 }
